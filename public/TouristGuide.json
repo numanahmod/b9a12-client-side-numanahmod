@@ -1,0 +1,58 @@
+[
+    {
+        "_id": "guide001",
+        "name": "John Doe",
+        "profile_picture": "https://i.ibb.co/HDJ4kCw/p1.jpg",
+        "contact_details": {
+            "phone": "+1234567890",
+            "email": "john.doe@example.com",
+            "address": "123 Main Street, Cityville, Country"
+        },
+        "education":"Bachelor of Arts in History",
+        "skills": ["Historical Tours", "Cultural Tours", "Multilingual (English, Spanish)"],
+        "work_experience": "3 years",
+        "reviews": "4.5"
+    },
+    {
+        "_id": "guide002",
+        "name": "Maria Garcia",
+        "profile_picture": "https://i.ibb.co/FgZTYcs/p2.jpg",
+        "contact_details": {
+            "phone": "+0987654321",
+            "email": "maria.garcia@example.com",
+            "address": "456 Elm Street, Townsville, Country"
+        },
+        "education": "Master of Tourism Management",
+        "skills": ["Ecotourism", "Adventure Tours", "Multilingual (English, French, Italian)"],
+        "work_experience": "5 years",
+        "reviews": "4.0"
+    },
+    {
+        "_id": "guide003",
+        "name": "Ahmed Khan",
+        "profile_picture": "https://i.ibb.co/RCc6Rh1/p3.jpg",
+        "contact_details": {
+            "phone": "+1122334455",
+            "email": "ahmed.khan@example.com",
+            "address": "789 Pine Street, Metropolis, Country"
+        },
+        "education": "Bachelor of Science in Geography",
+        "skills": ["Geographical Tours", "Cultural Heritage", "Multilingual (English, Arabic)"],
+        "work_experience": "2 years",
+        "reviews": "5.00"
+    },
+    {
+        "_id": "guide004",
+        "name": "Li Wei",
+        "profile_picture": "https://i.ibb.co/P4kFDVr/p4.jpg",
+        "contact_details": {
+            "phone": "+9988776655",
+            "email": "li.wei@example.com",
+            "address": "1010 Cedar Street, Capital City, Country"
+        },
+        "education":"Bachelor of Arts in Cultural Studies",
+        "skills": ["Cultural Tours", "Museum Tours", "Multilingual (English, Chinese, Japanese)"],
+        "work_experience": "7 years",
+        "reviews": "4.5"
+    }
+]

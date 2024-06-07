@@ -2,6 +2,8 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import VideoPlayer from '../../Routes/VideoPlayer';
+import OurPackages from './OurPackages';
+import TourGuidesList from './TourGuidesList';
 
 
 // eslint-disable-next-line react/prop-types
@@ -22,7 +24,7 @@ const TabTourism = () => {
     </div>
     <TabPanel>
       
-        <div className='grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
+        <div className=' gap-8 mt-8 xl:mt-16 items-center justify-center'>
         {
           // jobs?.filter(j=> j.job_type==='Overview'
           // )?.map(job =>(
@@ -42,16 +44,18 @@ const TabTourism = () => {
           //   <JobCard key={job._id} job={job} />
           // ))
         }
+        <OurPackages></OurPackages>
         </div>
     </TabPanel>
     <TabPanel>
-    <div className='grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
+    <div className=' gap-8 mt-8 xl:mt-16 xl:grid-cols-3'>
         {
           // jobs?.filter(j=> j.job_type==='Meet Our Tour Guides'
           // )?.map(job =>(
           //   <JobCard key={job._id} job={job} />
           // ))
         }
+        <TourGuidesList></TourGuidesList>
         </div>
     </TabPanel>
     

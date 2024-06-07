@@ -21,6 +21,11 @@ heading={'Look at our Tourism and Travel Guide'}
 <TabTourism></TabTourism>
 
 </div>
+<div>
+ <SectionTitle
+ heading={'Tour Types'}
+ ></SectionTitle>
+</div>
        
        </>
 
