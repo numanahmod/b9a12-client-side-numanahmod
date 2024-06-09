@@ -19,7 +19,7 @@ const OurPackages = () => {
     <h2 className="card-title"><span className=' text-orange-500 font-bold'>Price:</span> <span className=' font-bold'>250 $ </span></h2>
 
     <div className="card-actions justify-end">
-      <Link>
+      <Link to={`/packageDetails`}>
       <button className="btn btn-primary">View Package</button>
       </Link>
     </div>

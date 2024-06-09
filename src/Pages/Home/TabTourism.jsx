@@ -5,12 +5,20 @@ import VideoPlayer from '../../Routes/VideoPlayer';
 import OurPackages from './OurPackages';
 import TourGuidesList from './TourGuidesList';
 
+//motion 
+import {motion} from 'framer-motion'
+//variants 
+import {fadeIn} from '../../variants'
 
 // eslint-disable-next-line react/prop-types
 const TabTourism = () => {
   // console.log('jobssss data ',jobs);
     return (
-        <div className='m-10'>
+        <motion.div
+        variants={fadeIn('up', 0.2)}
+        initial= 'hidden'
+        whileInView={'show'}
+        viewport={{once: false, amount: 0.7}} className='m-10'>
 
           {/* <p>   TAbbbbb </p> */}
           <Tabs>
@@ -24,7 +32,7 @@ const TabTourism = () => {
     </div>
     <TabPanel>
       
-        <div className=' gap-8 mt-8 xl:mt-16 items-center justify-center'>
+        <div className='  xl:ml-72 md:ml-28 gap-8 mt-8 xl:mt-16 items-center justify-center'>
         {
           // jobs?.filter(j=> j.job_type==='Overview'
           // )?.map(job =>(
@@ -61,7 +69,7 @@ const TabTourism = () => {
     
     
        </Tabs>
-        </div>
+        </motion.div>
     );
 };
 

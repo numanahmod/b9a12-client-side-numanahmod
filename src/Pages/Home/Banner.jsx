@@ -11,11 +11,20 @@ import slider5 from '/srimangal.jpg'
 import slider6 from '/sundarbans.jpeg'
 import slider7 from '/sundorban3.jpg'
 
+//motion 
+import {motion} from 'framer-motion'
+//variants 
+import { fadeIn } from "../../variants";
+
 
 
 const Banner = () => {
   return (
-    <div>
+    <motion.div
+    variants={fadeIn('up', 0.2)}
+    initial= 'hidden'
+    whileInView={'show'}
+    viewport={{once: false, amount: 0.7}}>
     <Carousel>
         <div>
             <img src={slider1} />
@@ -47,7 +56,7 @@ const Banner = () => {
         </div>
     </Carousel>
     
-</div>
+</motion.div>
   );
 };
 

@@ -6,6 +6,7 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../Pages/Home/Home";
 import Community from "../Pages/Community/Community";
 import GuideDetails from "../Pages/GuideDetails";
+import PackageDetailsPage from "../Pages/Home/PackageDetailsPage";
 
 
  export  const router = createBrowserRouter([
@@ -25,6 +26,11 @@ import GuideDetails from "../Pages/GuideDetails";
           path: '/guideDetails/:_id',
           element: <GuideDetails>  </GuideDetails>,
           loader: () => fetch('TouristGuide.json')
+        },
+        {
+          path: '/packageDetails',
+          element: <PackageDetailsPage></PackageDetailsPage>,
+          // loader: () => fetch('TouristGuide.json')
         }
       ]
     },
