@@ -1,7 +1,7 @@
 [
     {
-        "_id": "guide001",
-        "name": "John Doe",
+       
+        "name": "Mr. Rahman",
         "profile_picture": "https://i.ibb.co/HDJ4kCw/p1.jpg",
         "contact_details": {
             "phone": "+1234567890",
@@ -11,11 +11,13 @@
         "education":"Bachelor of Arts in History",
         "skills": ["Historical Tours", "Cultural Tours", "Multilingual (English, Spanish)"],
         "work_experience": "3 years",
-        "reviews": "4.5"
+        "reviews": "4.5",
+        "comment": "he is a helpful and funny person. I enjoy with him"
+
     },
     {
-        "_id": "guide002",
-        "name": "Maria Garcia",
+       
+        "name": "Mr. Hasan",
         "profile_picture": "https://i.ibb.co/FgZTYcs/p2.jpg",
         "contact_details": {
             "phone": "+0987654321",
@@ -25,10 +27,11 @@
         "education": "Master of Tourism Management",
         "skills": ["Ecotourism", "Adventure Tours", "Multilingual (English, French, Italian)"],
         "work_experience": "5 years",
-        "reviews": "4.0"
+        "reviews": "4.0",
+        "comment": "he is a helpful and funny person. I enjoy with him"
     },
     {
-        "_id": "guide003",
+        
         "name": "Ahmed Khan",
         "profile_picture": "https://i.ibb.co/RCc6Rh1/p3.jpg",
         "contact_details": {
@@ -39,11 +42,12 @@
         "education": "Bachelor of Science in Geography",
         "skills": ["Geographical Tours", "Cultural Heritage", "Multilingual (English, Arabic)"],
         "work_experience": "2 years",
-        "reviews": "5.00"
+        "reviews": "5.00",
+        "comment": "he is a helpful and funny person. I enjoy with him"
     },
     {
-        "_id": "guide004",
-        "name": "Li Wei",
+       
+        "name": "Mr. Imran",
         "profile_picture": "https://i.ibb.co/P4kFDVr/p4.jpg",
         "contact_details": {
             "phone": "+9988776655",
@@ -53,6 +57,7 @@
         "education":"Bachelor of Arts in Cultural Studies",
         "skills": ["Cultural Tours", "Museum Tours", "Multilingual (English, Chinese, Japanese)"],
         "work_experience": "7 years",
-        "reviews": "4.5"
+        "reviews": "4.5",
+        "comment": "he is a helpful and funny person. I enjoy with him"
     }
 ]

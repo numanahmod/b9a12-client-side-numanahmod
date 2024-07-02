@@ -2,6 +2,7 @@ import SectionTitle from "../../Shared/SectionTitle";
 import Banner from "./Banner";
 import StoriesShare from "./StoriesShare";
 import TabTourism from "./TabTourism";
+import TourGuides from "./TourGuides";
 import TourType from "./TourType";
 
 
@@ -38,7 +39,7 @@ heading={'Look at our Tourism and Travel Guide'}
   </SectionTitle>
   <StoriesShare></StoriesShare>
 </div>
-       
+       <TourGuides></TourGuides>
        </>
 
     );

@@ -1,14 +1,20 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { MdTour } from "react-icons/md";
 import {  Link, NavLink } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from "../providers/AuthProvider";
+import { Tooltip } from "react-tooltip";
+import { FaShoppingCart } from "react-icons/fa";
+import useCartOfPackage from "../hooks/useCartOfPackage";
 
 
 
  
 const Navbar = () => {
-
+  const { user, logOut } = useContext(AuthContext);
+  const [carts] = useCartOfPackage();
   const [theme, setTheme] = useState('light')
 
   const handleLogout = () =>{
@@ -40,6 +46,7 @@ const Navbar = () => {
 
 
   const navLinks =  <>
+        
         <NavLink to='/' className={({isActive})=> isActive? 'btn font-bold btn-secondary':'font-bold btn'}> Home </NavLink>
 
         <NavLink to='/community' className={({isActive})=> isActive? 'btn  font-bold btn-secondary':'font-bold btn'}> Community </NavLink>
@@ -47,6 +54,8 @@ const Navbar = () => {
         <NavLink to='/about' className={({isActive})=> isActive? 'btn  font-bold btn-secondary':'font-bold btn'}>  About Us  </NavLink>
         <NavLink to='/contact' className={({isActive})=> isActive? 'btn  font-bold btn-secondary':'font-bold btn'}> Contact Us   </NavLink>
         <NavLink to='/register' className={({isActive})=> isActive? 'btn  font-bold btn-secondary':'font-bold btn'}> Register  </NavLink>
+        
+        {/* <p>{user?.displayName}</p> */}
 
         {/* {user && 
           <NavLink to='/appliedJobs' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> Applied Jobs  </NavLink>}
@@ -94,8 +103,9 @@ const Navbar = () => {
 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-y-5">
 {navLinks}
 </ul>
-</div>
-<Link to={`/`}> <a className="btn btn-ghost  lg:text-xl md:text-xl lg:font-bold md:font-bold">  <MdTour className="text-green-500"/> <span className=" text-red-800">BD</span> <span className=" text-green-600">Tourist Guide </span> </a></Link> 
+</div> 
+
+<Link to={`/`}> <a className="btn btn-ghost  lg:text-xl md:text-xl lg:font-bold md:font-bold">  <MdTour className="text-green-500"/> <span className=" text-red-800">BD</span> <span className=" text-green-600">T Guide </span> </a></Link> 
 </div>
 <div className="navbar-center hidden lg:flex">
 <ul className="menu menu-horizontal px-1 gap-3">
@@ -107,27 +117,52 @@ const Navbar = () => {
 
 
 <div className="flex gap-4">
-
-
-
-{/* {user && <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar " >
+{user && 
+  <div className="dropdown dropdown-end dropdown-hover">
+  <div tabIndex={0} role="button" className=" m-1">
+    {/* Profile start */}
+    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar " >
   <div className="w-10 rounded-full" >  
       
       <a className="my-anchor-element"><img className=""  alt="Please, reload" src={user?.photoURL} /></a>
-      <Tooltip anchorSelect=".my-anchor-element" place="top">
+      {/* <Tooltip anchorSelect=".my-anchor-element" place="top">
       {user.displayName}
-</Tooltip>
+</Tooltip> */}
   </div>
-</div> } */}
-<div>
+</div>
+{/* end */}
+</div>
+  <ul  tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 text-black">
+    <li className="mb-2"><NavLink to={'/dashboard/myBookings'} className={({isActive})=> isActive? 'btn  font-bold btn-secondary':'font-bold btn'}> Dashboard</NavLink></li> <br />
+    <li><NavLink to='' className={'font-bold btn'}> Offer Announcements</NavLink></li>
+   
+    
+<li className=" text-center text-rose-600 text-xl font-bold">Name:</li>
+<li className=" text-center text-purple-700"> {user.displayName} </li>
+<li className=" text-center text-rose-600 text-xl font-bold">email:</li>
+<li className=" text-center text-purple-700"> {user.email} </li>
+<li><div>
 {
-// user ? 
-// <button onClick={handleLogout} className="btn bg-amber-500"> LogOut </button>
-// :
-<NavLink to='/login' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> Login </NavLink>
+user ? 
+<button onClick={handleLogout} className="btn ml-10 bg-amber-500"> LogOut </button>
+:
+<NavLink to='/logIn' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> Login </NavLink>
+}
+<ToastContainer /> 
+</div></li>
+  </ul>
+</div>
+
+ }
+ <div>
+{
+!user &&
+
+<NavLink to='/logIn' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> Login </NavLink>
 }
 <ToastContainer /> 
 </div>
+
 
 
 </div>

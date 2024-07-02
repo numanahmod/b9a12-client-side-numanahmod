@@ -2,21 +2,19 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 
-const TourGuidesList = () => {
-
+const TourGuides = () => {
     const [guides, setGuides] = useState([]);
-
-    useEffect(() => {
-        fetch('TouristGuide.json')
-            .then(response => response.json())
-            .then(data => setGuides(data));
-    }, []);
-
-
-
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_URL}/touristGuides`)
+          .then(response => response.json())
+          .then(data => setGuides(data));
+  }, []);
+  
     return (
         <div>
-          <div className="overflow-x-auto" >
+             <div>
+        <h2 className=" text-3xl text-green-500 font-bold text-center">Our tour guides</h2>
+        <div className="overflow-x-auto" >
   <table className="table">
     {/* head */}
     <thead>
@@ -28,7 +26,7 @@ const TourGuidesList = () => {
         <th></th>
       </tr>
     </thead>
-    {guides.map(guide => (<tbody key={'_id'}>
+    {guides.map(guide => (<tbody key={guide._id}>
       {/* row 1 */}
       <tr>
         
@@ -50,7 +48,7 @@ const TourGuidesList = () => {
         </td>
         <td> {guide.work_experience} </td>
         <th>
-          <Link to={`/guideDetails/${guide._id}`}><button className="btn btn-ghost btn-xs">details</button></Link>
+          <Link to={`/guideDetails/${guide._id}`}><button className="btn btn-primary">details</button></Link>
         </th>
       </tr>
      
@@ -62,10 +60,10 @@ const TourGuidesList = () => {
     
   </table>
 </div>
-
+      </div>
+            
         </div>
-    
     );
 };
 
-export default TourGuidesList;
+export default TourGuides;

@@ -1,9 +1,10 @@
+import TourGuides from "../Home/TourGuides";
 
 
 const Community = () => {
     return (
-        <div>
-            this is comminity page mama
+        <div className=" p-28">
+           <TourGuides></TourGuides>
         </div>
     );
 };

@@ -3,12 +3,13 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import VideoPlayer from '../../Routes/VideoPlayer';
 import OurPackages from './OurPackages';
-import TourGuidesList from './TourGuidesList';
+
 
 //motion 
 import {motion} from 'framer-motion'
 //variants 
 import {fadeIn} from '../../variants'
+import TourGuides from './TourGuides';
 
 // eslint-disable-next-line react/prop-types
 const TabTourism = () => {
@@ -45,7 +46,7 @@ const TabTourism = () => {
          
     </TabPanel>
     <TabPanel>
-    <div className='grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
+    <div className=''>
         {
           // jobs?.filter(j=> j.job_type==='Our Packages'
           // )?.map(job =>(
@@ -63,7 +64,7 @@ const TabTourism = () => {
           //   <JobCard key={job._id} job={job} />
           // ))
         }
-        <TourGuidesList></TourGuidesList>
+        <TourGuides></TourGuides>
         </div>
     </TabPanel>
     
